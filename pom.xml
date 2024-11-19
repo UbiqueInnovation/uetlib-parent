@@ -33,6 +33,13 @@
         <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>de.westemeyer</groupId>
+            <artifactId>artifact-version-service</artifactId>
+        </dependency>
+    </dependencies>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -130,6 +137,11 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>de.westemeyer</groupId>
+                <artifactId>artifact-version-maven-plugin</artifactId>
             </plugin>
 
             <plugin>
