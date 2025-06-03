@@ -19,7 +19,7 @@
         <!-- Versions -->
         <com.google.protobuf.version>4.28.3</com.google.protobuf.version>
         <org.jacoco.version>0.8.13</org.jacoco.version>
-        <org.springframework.boot.version>3.4.5</org.springframework.boot.version>
+        <org.springframework.boot.version>3.5.0</org.springframework.boot.version>
         <org.springframework.cloud.version>2024.0.1</org.springframework.cloud.version>
 
         <!-- Sonar & Jacoco coverage reports -->
