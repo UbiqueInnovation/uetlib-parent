@@ -17,10 +17,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- Versions -->
-        <com.google.protobuf.version>4.28.3</com.google.protobuf.version>
-        <org.jacoco.version>0.8.13</org.jacoco.version>
-        <org.springframework.boot.version>3.5.0</org.springframework.boot.version>
-        <org.springframework.cloud.version>2025.0.0</org.springframework.cloud.version>
+        <com.google.protobuf.version>4.31.1</com.google.protobuf.version>
 
         <!-- Sonar & Jacoco coverage reports -->
         <sonar.coverage.module/>
@@ -59,7 +56,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>${org.springframework.boot.version}</version>
+                <version>3.5.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -67,7 +64,7 @@
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${org.springframework.cloud.version}</version>
+                <version>2025.0.0</version>
                 <type>pom</type>
                 <scope>import</scope>
                 <exclusions>
@@ -183,7 +180,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>${org.jacoco.version}</version>
+                    <version>0.8.13</version>
                     <executions>
                         <execution>
                             <id>prepare-agent</id>
