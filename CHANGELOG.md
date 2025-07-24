@@ -14,3 +14,4 @@ Upgrade to Spring Boot 3.5.0 and Spring Cloud 2025.0.0
 
 First release.
 
+¨
