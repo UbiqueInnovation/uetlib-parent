@@ -1,5 +1,35 @@
 # CHANGELOG
 
+## 1.2.6
+
+### Improvements
+
+- Renovate version updates
+
+## 1.2.5
+
+### Improvements
+
+- Add `kotlin-maven-plugin`
+
+## 1.2.4
+
+### Improvements
+
+- Renovate version updates
+
+## 1.2.3
+
+### Improvements
+
+- Renovate version updates
+
+## 1.2.2
+
+### Improvements
+
+- Renovate version updates
+
 ## 1.2.1
 
 ### Improvements
