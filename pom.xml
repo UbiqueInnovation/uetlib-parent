@@ -204,7 +204,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.13</version>
+                    <version>0.8.14</version>
                     <executions>
                         <execution>
                             <id>prepare-agent</id>
@@ -263,7 +263,7 @@
                 <plugin>
                     <groupId>org.hibernate.orm.tooling</groupId>
                     <artifactId>hibernate-enhance-maven-plugin</artifactId>
-                    <version>6.6.30.Final</version>
+                    <version>6.6.34.Final</version>
                     <executions>
                         <execution>
                             <configuration>
