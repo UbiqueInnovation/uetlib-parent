@@ -39,20 +39,7 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>ch.ubique</groupId>
-                <artifactId>uetlib-bom</artifactId>
-                <version>1.2.16</version>
-                <type>pom</type>
-                <scope>import</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>org.apache.tomcat.embed</groupId>
-                        <artifactId>*</artifactId>
-                    </exclusion>
-                </exclusions>
-            </dependency>
-
+            <!-- 🧱 Base / Platform BOMs (foundation first) -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -70,6 +57,21 @@
                 <exclusions>
                     <exclusion>
                         <groupId>io.kubernetes</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!-- 🏢 Enterprise BOM -->
+            <dependency>
+                <groupId>ch.ubique</groupId>
+                <artifactId>uetlib-bom</artifactId>
+                <version>1.3.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.apache.tomcat.embed</groupId>
                         <artifactId>*</artifactId>
                     </exclusion>
                 </exclusions>
@@ -120,6 +122,30 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <!--            <plugin>-->
+            <!--                <groupId>org.apache.maven.plugins</groupId>-->
+            <!--                <artifactId>maven-enforcer-plugin</artifactId>-->
+            <!--                <version>3.5.0</version>-->
+            <!--                <executions>-->
+            <!--                    <execution>-->
+            <!--                        <id>enforce</id>-->
+            <!--                        <phase>validate</phase>-->
+            <!--                        <goals>-->
+            <!--                            <goal>enforce</goal>-->
+            <!--                        </goals>-->
+            <!--                        <configuration>-->
+            <!--                            <fail>true</fail>-->
+            <!--                            <rules>-->
+            <!--                                <requireUpperBoundDeps/>-->
+            <!--                                <banDuplicatePomDependencyVersions/>-->
+            <!--                                &lt;!&ndash; Optional but useful: fail if multiple versions are present &ndash;&gt;-->
+            <!--                                &lt;!&ndash; <dependencyConvergence/> &ndash;&gt;-->
+            <!--                            </rules>-->
+            <!--                        </configuration>-->
+            <!--                    </execution>-->
+            <!--                </executions>-->
+            <!--            </plugin>-->
         </plugins>
 
         <pluginManagement>
