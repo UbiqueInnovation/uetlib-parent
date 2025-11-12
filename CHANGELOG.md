@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 1.3.0
+
+- Latest `uetlib-bom` and fix ordering in dependency management
+
 ## 1.2.6
 
 ### Improvements
