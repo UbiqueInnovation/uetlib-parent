@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2025.12.0
+
+We adopt Calendar versioning (CalVer) `YYYY.MM.PATCH`
+
+### Version Upgrades
+
+- Upgrade to Spring Boot 4.0.0
+- Upgrade to Spring Cloud 2025.1.0 for Spring Boot 4 support
+
 ## 1.3.0
 
 - Latest `uetlib-bom` and fix ordering in dependency management
