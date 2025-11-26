@@ -9,6 +9,10 @@ We adopt Calendar versioning (CalVer) `YYYY.MM.PATCH`
 - Upgrade to Spring Boot 4.0.0
 - Upgrade to Spring Cloud 2025.1.0 for Spring Boot 4 support
 
+### Improvements
+
+- Java 25
+
 ## 1.3.0
 
 - Latest `uetlib-bom` and fix ordering in dependency management
