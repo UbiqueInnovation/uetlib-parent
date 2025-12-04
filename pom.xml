@@ -20,7 +20,7 @@
         <com.google.protobuf.version>4.31.1</com.google.protobuf.version>
 
         <!-- Sonar & Jacoco coverage reports -->
-        <sonar.coverage.module/>
+        <sonar.coverage.module>${project.artifactId}</sonar.coverage.module>
         <sonar.coverage.jacoco.xmlReportPaths>
             ${project.basedir}/../${sonar.coverage.module}/target/site/jacoco-aggregate/jacoco.xml
         </sonar.coverage.jacoco.xmlReportPaths>
@@ -313,11 +313,6 @@
     </build>
 
     <repositories>
-        <repository>
-            <id>ubique-artifactory</id>
-            <name>Ubique Artifactory</name>
-            <url>https://artifactory.ubique.ch/artifactory/backend</url>
-        </repository>
         <repository>
             <id>osgeo</id>
             <name>Open Source Geospatial Foundation Repository</name>
