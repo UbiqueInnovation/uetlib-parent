@@ -111,6 +111,11 @@
             </plugin>
 
             <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+            </plugin>
+
+            <plugin>
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <executions>
@@ -294,7 +299,6 @@
                         <execution>
                             <configuration>
                                 <failOnError>true</failOnError>
-                                <enableLazyInitialization>true</enableLazyInitialization>
                             </configuration>
                             <goals>
                                 <goal>enhance</goal>
