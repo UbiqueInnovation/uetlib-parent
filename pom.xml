@@ -287,9 +287,9 @@
 
                 <!-- Plugin to allow lazy-fetching an entity attribute using @Basic(fetch = FetchType.LAZY) -->
                 <plugin>
-                    <groupId>org.hibernate.orm.tooling</groupId>
-                    <artifactId>hibernate-enhance-maven-plugin</artifactId>
-                    <version>6.6.38.Final</version>
+                    <groupId>org.hibernate.orm</groupId>
+                    <artifactId>hibernate-maven-plugin</artifactId>
+                    <version>7.1.11.Final</version>
                     <executions>
                         <execution>
                             <configuration>
