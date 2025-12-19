@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 2025.12.0
+## 2026.0.0
 
 We adopt Calendar versioning (CalVer) `YYYY.MM.PATCH`
 
