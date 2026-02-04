@@ -6,7 +6,7 @@
 
     <groupId>ch.ubique</groupId>
     <artifactId>uetlib-parent</artifactId>
-    <version>2026.0.0-SNAPSHOT</version>
+    <version>2027.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <properties>
