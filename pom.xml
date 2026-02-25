@@ -133,30 +133,6 @@
                     </execution>
                 </executions>
             </plugin>
-
-            <!--            <plugin>-->
-            <!--                <groupId>org.apache.maven.plugins</groupId>-->
-            <!--                <artifactId>maven-enforcer-plugin</artifactId>-->
-            <!--                <version>3.5.0</version>-->
-            <!--                <executions>-->
-            <!--                    <execution>-->
-            <!--                        <id>enforce</id>-->
-            <!--                        <phase>validate</phase>-->
-            <!--                        <goals>-->
-            <!--                            <goal>enforce</goal>-->
-            <!--                        </goals>-->
-            <!--                        <configuration>-->
-            <!--                            <fail>true</fail>-->
-            <!--                            <rules>-->
-            <!--                                <requireUpperBoundDeps/>-->
-            <!--                                <banDuplicatePomDependencyVersions/>-->
-            <!--                                &lt;!&ndash; Optional but useful: fail if multiple versions are present &ndash;&gt;-->
-            <!--                                &lt;!&ndash; <dependencyConvergence/> &ndash;&gt;-->
-            <!--                            </rules>-->
-            <!--                        </configuration>-->
-            <!--                    </execution>-->
-            <!--                </executions>-->
-            <!--            </plugin>-->
         </plugins>
 
         <pluginManagement>
@@ -285,6 +261,10 @@
                             </goals>
                         </execution>
                     </executions>
+                    <configuration>
+                        <serviceType>NATIVE</serviceType>
+                    </configuration>
+
                 </plugin>
 
                 <plugin>
