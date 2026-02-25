@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026.2.0
+
+- Update de.westemeyer:artifact-version-maven-plugin to v2 for compatibility with de.westemeyer:artifact-version-service v2
+- uetlib-bom 2026.2.0
+- Spring Boot 4.0.3
+- other upgrades
+
 ## 2026.0.0
 
 We adopt Calendar versioning (CalVer) `YYYY.MM.PATCH`
