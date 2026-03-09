@@ -1,8 +1,17 @@
 # CHANGELOG
 
+## 2026.3.0
+
+- Added nullaway step to maven-compiler-plugin. If your module is fully annotated, add the following
+  maven property to enforce explicit null marking:
+  ```xml
+  <explicit-null-marking-level>ERROR</explicit-null-marking-level>
+  ```
+
 ## 2026.2.0
 
-- Update de.westemeyer:artifact-version-maven-plugin to v2 for compatibility with de.westemeyer:artifact-version-service v2
+- Update de.westemeyer:artifact-version-maven-plugin to v2 for compatibility with de.westemeyer:
+  artifact-version-service v2
 - uetlib-bom 2026.2.0
 - Spring Boot 4.0.3
 - other upgrades
