@@ -257,7 +257,7 @@
                 <plugin>
                     <groupId>org.jetbrains.kotlin</groupId>
                     <artifactId>kotlin-maven-plugin</artifactId>
-                    <version>2.3.10</version>
+                    <version>2.3.20</version>
                     <executions>
                         <execution>
                             <id>compile</id>
@@ -308,7 +308,7 @@
                 <plugin>
                     <groupId>de.westemeyer</groupId>
                     <artifactId>artifact-version-maven-plugin</artifactId>
-                    <version>2.0.0</version>
+                    <version>2.0.1</version>
                     <executions>
                         <execution>
                             <goals>
@@ -345,7 +345,7 @@
                 <plugin>
                     <groupId>org.hibernate.orm</groupId>
                     <artifactId>hibernate-maven-plugin</artifactId>
-                    <version>7.2.6.Final</version>
+                    <version>7.2.9.Final</version>
                     <executions>
                         <execution>
                             <configuration>
