@@ -76,7 +76,7 @@
             <dependency>
                 <groupId>ch.ubique</groupId>
                 <artifactId>uetlib-bom</artifactId>
-                <version>2026.2.4</version>
+                <version>2026.4.0</version>
                 <type>pom</type>
                 <scope>import</scope>
                 <exclusions>
