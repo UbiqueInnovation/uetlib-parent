@@ -135,7 +135,7 @@
                         <path>
                             <groupId>com.uber.nullaway</groupId>
                             <artifactId>nullaway</artifactId>
-                            <version>0.13.1</version>
+                            <version>0.13.4</version>
                         </path>
                     </annotationProcessorPaths>
                 </configuration>
@@ -257,7 +257,7 @@
                 <plugin>
                     <groupId>org.jetbrains.kotlin</groupId>
                     <artifactId>kotlin-maven-plugin</artifactId>
-                    <version>2.3.20</version>
+                    <version>2.3.21</version>
                     <executions>
                         <execution>
                             <id>compile</id>
@@ -345,7 +345,7 @@
                 <plugin>
                     <groupId>org.hibernate.orm</groupId>
                     <artifactId>hibernate-maven-plugin</artifactId>
-                    <version>7.2.9.Final</version>
+                    <version>7.2.16.Final</version>
                     <executions>
                         <execution>
                             <configuration>
