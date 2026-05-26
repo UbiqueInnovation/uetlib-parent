@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## 2026.05.0
+
+- Updated dependencies
+- Updated to Spring Boot 4.0.6
+- Updated to uetlib BOM 2026.4.0
+- Added property to set the artifact package name for westemeryer so you can create a `package-info.java` for
+  null-marking.
+  ```xml
+  <westemeyer-version-artifact-package-name>ch.your.project.version</westemeyer-version-artifact-package-name>
+  ```
+
+  ```java
+  @NullMarked
+  package ch.your.project.version;
+  
+  import org.jspecify.annotations.NullMarked;
+  ```
+
 ## 2026.3.0
 
 - Added nullaway step to maven-compiler-plugin. If your module is fully annotated, add the following
@@ -72,5 +90,3 @@ Upgrade to Spring Boot 3.5.0 and Spring Cloud 2025.0.0
 ## 1.0.0
 
 First release.
-
-¨
