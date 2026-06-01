@@ -1,11 +1,22 @@
 # CHANGELOG
 
+## 2026.06.0
+
+- Explicit null marking is now enforced by default. When using this as parent, either make sure to
+  mark everything with jspecify, or configure a lower marking level, e.g.:
+  ```xml
+  <explicit-null-marking-level>WARN</explicit-null-marking-level>
+  ```
+- Newest minor version for `org.hibernate.orm:hibernate-maven-plugin`
+- Newest patch version for `org.apache.maven.plugins:maven-surefire-plugin`
+
 ## 2026.05.0
 
 - Updated dependencies
 - Updated to Spring Boot 4.0.6
 - Updated to uetlib BOM 2026.4.0
-- Added property to set the artifact package name for westemeryer so you can create a `package-info.java` for
+- Added property to set the artifact package name for westemeryer so you can create a
+  `package-info.java` for
   null-marking.
   ```xml
   <westemeyer-version-artifact-package-name>ch.your.project.version</westemeyer-version-artifact-package-name>
