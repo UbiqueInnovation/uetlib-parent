@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026.06.1
+
+- Update `uetlib-bom` to
+  `2026.06.0`: [Changelog](https://github.com/UbiqueInnovation/uetlib-bom/blob/main/CHANGELOG.md#2026060)
+- Update to Spring Boot 4.1 (with Spring Cloud 2025.1.2 and Spring Integration 7.1.0)
+- Latest dependencies
+
 ## 2026.06.0
 
 - Explicit null marking is now enforced by default. When using this as parent, either make sure to
