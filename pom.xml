@@ -191,7 +191,7 @@
                             <path>
                                 <groupId>com.uber.nullaway</groupId>
                                 <artifactId>nullaway</artifactId>
-                                <version>0.13.4</version>
+                                <version>0.13.7</version>
                             </path>
                         </annotationProcessorPaths>
                         <compilerArgs>
@@ -278,7 +278,7 @@
                 <plugin>
                     <groupId>org.jacoco</groupId>
                     <artifactId>jacoco-maven-plugin</artifactId>
-                    <version>0.8.14</version>
+                    <version>0.8.15</version>
                     <executions>
                         <execution>
                             <id>prepare-agent</id>
@@ -341,7 +341,7 @@
                 <plugin>
                     <groupId>org.hibernate.orm</groupId>
                     <artifactId>hibernate-maven-plugin</artifactId>
-                    <version>7.4.0.Final</version>
+                    <version>7.4.2.Final</version>
                     <executions>
                         <execution>
                             <configuration>
