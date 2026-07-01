@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026.07.0
+
+- Make `XepExcludedPaths` configurable with property `error-prone-excluded-paths`
+- Add `maven-javadoc-plugin`
+
 ## 2026.06.1
 
 - Update `uetlib-bom` to
@@ -9,8 +14,8 @@
 
 ## 2026.06.0
 
-- Explicit null marking is now enforced by default. When using this as parent, either make sure to
-  mark everything with jspecify, or configure a lower marking level, e.g.:
+- Explicit null marking is now enforced by default. When using this as a parent, either make sure to
+  mark everything with jspecify or configure a lower marking level, e.g.:
   ```xml
   <explicit-null-marking-level>WARN</explicit-null-marking-level>
   ```
