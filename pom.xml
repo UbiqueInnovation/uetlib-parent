@@ -199,6 +199,10 @@
                                 <artifactId>nullaway</artifactId>
                                 <version>0.13.7</version>
                             </path>
+                            <path>
+                                <groupId>ch.ubique</groupId>
+                                <artifactId>uetlib-core</artifactId>
+                            </path>
                         </annotationProcessorPaths>
                         <compilerArgs>
                             <arg>--should-stop=ifError=FLOW</arg>
@@ -231,6 +235,30 @@
                     </configuration>
                     <!-- @formatter:on -->
                 </plugin>
+
+                <plugin>
+                    <groupId>com.diffplug.spotless</groupId>
+                    <artifactId>spotless-maven-plugin</artifactId>
+                    <version>3.8.0</version>
+                    <configuration>
+                        <java>
+                            <googleJavaFormat>
+                                <style>AOSP</style>
+                                <reorderImports>true</reorderImports>
+                            </googleJavaFormat>
+                        </java>
+                    </configuration>
+                    <executions>
+                        <execution>
+                            <id>spotless-check</id>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>check</goal>
+                            </goals>
+                        </execution>
+                    </executions>
+                </plugin>
+
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
