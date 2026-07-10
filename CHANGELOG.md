@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026.07.1
+
+- Add `spotless`: Run with `mvn spotless:apply`. See
+  also [README.md](README.md#git-pre-commit-hook-format-with-spotless)
+
 ## 2026.07.0
 
 - Make `XepExcludedPaths` configurable with property `error-prone-excluded-paths`
