@@ -60,10 +60,10 @@
                 <type>pom</type>
                 <scope>import</scope>
                 <exclusions>
-                <exclusion>
-                <groupId>org.apache.tomcat.embed</groupId>
-                <artifactId>*</artifactId>
-                </exclusion>
+                    <exclusion>
+                        <groupId>org.apache.tomcat.embed</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
                 </exclusions>
             </dependency>
 
@@ -83,10 +83,10 @@
                 <type>pom</type>
                 <scope>import</scope>
                 <exclusions>
-                <exclusion>
-                <groupId>io.kubernetes</groupId>
-                <artifactId>*</artifactId>
-                </exclusion>
+                    <exclusion>
+                        <groupId>io.kubernetes</groupId>
+                        <artifactId>*</artifactId>
+                    </exclusion>
                 </exclusions>
             </dependency>
 
