@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.07.3
+
+- Remove accidental inclusion of uetlib-core in annotation processor paths
+
 ## 2026.07.2
 
 - Add back sonar properties
