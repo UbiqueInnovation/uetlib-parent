@@ -199,10 +199,6 @@
                                 <artifactId>nullaway</artifactId>
                                 <version>0.13.7</version>
                             </path>
-                            <path>
-                                <groupId>ch.ubique</groupId>
-                                <artifactId>uetlib-core</artifactId>
-                            </path>
                         </annotationProcessorPaths>
                         <compilerArgs>
                             <arg>--should-stop=ifError=FLOW</arg>
