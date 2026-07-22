@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026.07.2
+
+- Add back sonar properties
+- Auto-apply spotless on `mvn install` locally but not on `mvn valdiate` on CI
+
 ## 2026.07.1
 
 - Add `spotless`: Run with `mvn spotless:apply`. See
