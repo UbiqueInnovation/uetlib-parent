@@ -51,8 +51,23 @@
         </dependency>
     </dependencies>
 
-        <dependencyManagement>
-    <dependencies>
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>ch.ubique</groupId>
+                <artifactId>uetlib-bom</artifactId>
+                <version>2026.06.0</version>
+                <type>pom</type>
+                <scope>import</scope>
+                <exclusions>
+                <exclusion>
+                <groupId>org.apache.tomcat.embed</groupId>
+                <artifactId>*</artifactId>
+                </exclusion>
+                </exclusions>
+            </dependency>
+
+            <!-- 🧱 Base / Platform BOMs (foundation first) -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
@@ -60,24 +75,25 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
                 <version>2025.1.2</version>
                 <type>pom</type>
                 <scope>import</scope>
+                <exclusions>
+                <exclusion>
+                <groupId>io.kubernetes</groupId>
+                <artifactId>*</artifactId>
+                </exclusion>
+                </exclusions>
             </dependency>
+
             <dependency>
                 <groupId>org.springframework.integration</groupId>
                 <artifactId>spring-integration-bom</artifactId>
                 <version>7.1.0</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <dependency>
-                <groupId>ch.ubique</groupId>
-                <artifactId>uetlib-bom</artifactId>
-                <version>2026.06.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
