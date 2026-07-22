@@ -249,16 +249,24 @@
                         </java>
                     </configuration>
                     <executions>
+                        <!-- Automatically format during normal local Maven builds. -->
+                        <execution>
+                            <id>spotless-apply</id>
+                            <phase>validate</phase>
+                            <goals>
+                                <goal>apply</goal>
+                            </goals>
+                        </execution>
+                        <!-- Verify formatting as part of the normal Maven lifecycle. -->
                         <execution>
                             <id>spotless-check</id>
-                            <phase>validate</phase>
+                            <phase>verify</phase>
                             <goals>
                                 <goal>check</goal>
                             </goals>
                         </execution>
                     </executions>
                 </plugin>
-
 
                 <plugin>
                     <groupId>org.apache.maven.plugins</groupId>
@@ -386,6 +394,7 @@
                         </execution>
                     </executions>
                     <configuration>
+                        <!--suppress MavenModelInspection -->
                         <protocArtifact>
                             com.google.protobuf:protoc:${com.google.protobuf.version}:exe:${os.detected.classifier}
                         </protocArtifact>
