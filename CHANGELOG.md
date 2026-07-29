@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 2026.7.4
+
+- `uetlib-bom` updated to
+  `2026.7.3`: [Changelog/2026.7.3](https://github.com/UbiqueInnovation/uetlib-bom/blob/main/CHANGELOG.md#202673) [Diff/2026.06.0-2026.7.3](https://github.com/UbiqueInnovation/uetlib-bom/compare/v2026.06.0...v2026.7.3)
+- Update dependencies, plugins and actions
+
 ## 2026.07.3
 
 - Remove accidental inclusion of uetlib-core in annotation processor paths
