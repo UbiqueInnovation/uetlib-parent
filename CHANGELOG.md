@@ -3,6 +3,9 @@
 ## 2026.7.5
 
 - hard-code null-marking level to ERROR, no chickening out for uetlib
+- Configure `spotless` with `ktfmt` for Kotlin
+- `uetlib-bom` updated to
+  `2026.7.4`: [Changelog/2026.7.4](https://github.com/UbiqueInnovation/uetlib-bom/blob/main/CHANGELOG.md#202674) [Diff/2026.7.3-2026.7.4](https://github.com/UbiqueInnovation/uetlib-bom/compare/v2026.7.3...v2026.7.4)
 
 ## 2026.7.4
 
