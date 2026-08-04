@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.8.0
+
+- Java 25 required
+
 ## 2026.7.6
 
 - updated actions to not run tests twice for sonar
@@ -47,8 +51,8 @@
 
 ## 2026.06.0
 
-- Explicit null marking is now enforced by default. When using this as a parent, either make sure to
-  mark everything with jspecify or configure a lower marking level, e.g.:
+- Explicit null marking is now enforced by default. When using this as a parent, either make sure to mark everything
+  with jspecify or configure a lower marking level, e.g.:
   ```xml
   <explicit-null-marking-level>WARN</explicit-null-marking-level>
   ```
@@ -61,8 +65,7 @@
 - Updated to Spring Boot 4.0.6
 - Updated to uetlib BOM 2026.4.0
 - Added property to set the artifact package name for westemeryer so you can create a
-  `package-info.java` for
-  null-marking.
+  `package-info.java` for null-marking.
   ```xml
   <westemeyer-version-artifact-package-name>ch.your.project.version</westemeyer-version-artifact-package-name>
   ```
@@ -76,8 +79,8 @@
 
 ## 2026.3.0
 
-- Added nullaway step to maven-compiler-plugin. If your module is fully annotated, add the following
-  maven property to enforce explicit null marking:
+- Added nullaway step to maven-compiler-plugin. If your module is fully annotated, add the following maven property to
+  enforce explicit null marking:
   ```xml
   <explicit-null-marking-level>ERROR</explicit-null-marking-level>
   ```
