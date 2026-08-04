@@ -3,6 +3,8 @@
 ## 2026.8.0
 
 - Java 25 required
+- `uetlib-bom` updated to
+  `2026.8.0`: [Changelog/2026.8.0](https://github.com/UbiqueInnovation/uetlib-bom/blob/main/CHANGELOG.md#202680) [Diff/2026.7.5-2026.8.0](https://github.com/UbiqueInnovation/uetlib-bom/compare/v2026.7.5...v2026.8.0)
 
 ## 2026.7.6
 
