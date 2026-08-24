@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.8.2
+
+- Add `org:jspecify:jspecify` for activation of NullMarked in `de.westemeyer:artifact-version-maven-plugin`
+
 ## 2026.8.1
 
 - `spring-boot-dependencies` updated to `4.1.1`
