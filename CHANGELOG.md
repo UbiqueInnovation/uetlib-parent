@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## 2026.8.1
+
+- `spring-boot-dependencies` updated to `4.1.1`
+- `uetlib-bom` updated to
+  `2026.8.3`: [Changelog/2026.8.3](https://github.com/UbiqueInnovation/uetlib-bom/blob/main/CHANGELOG.md#202683) [Diff/2026.8.2-2026.8.3](https://github.com/UbiqueInnovation/uetlib-bom/compare/v2026.8.2...v2026.8.3)
+- Update `de.westemeyer:artifact-version-maven-plugin` to `2.1.0`, wich is fully null-marked. Property
+  `westemeyer-version-package-name` is not longer used and can be removed.
+- Version updates
+
 ## 2026.8.0
 
 - Java 25 required
