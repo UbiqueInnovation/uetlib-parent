@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.8.3
+
+- Update `de.westemeyer:artifact-version-maven-plugin` to `3.0.0`
+
 ## 2026.8.2
 
 - Add `org:jspecify:jspecify` for activation of NullMarked in `de.westemeyer:artifact-version-maven-plugin`
