@@ -231,7 +231,7 @@
                 <plugin>
                     <groupId>com.diffplug.spotless</groupId>
                     <artifactId>spotless-maven-plugin</artifactId>
-                    <version>3.10.0</version>
+                    <version>3.10.1</version>
                     <configuration>
                         <java>
                             <googleJavaFormat>
@@ -407,7 +407,7 @@
                 <plugin>
                     <groupId>org.hibernate.orm</groupId>
                     <artifactId>hibernate-maven-plugin</artifactId>
-                    <version>7.4.6.Final</version>
+                    <version>7.4.7.Final</version>
                     <executions>
                         <execution>
                             <configuration>
