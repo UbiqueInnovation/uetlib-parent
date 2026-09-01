@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## 2026.9.0
+
+- `uetlib-bom` updated to
+  `2026.9.0`: [Changelog/2026.9.0](https://github.com/UbiqueInnovation/uetlib-bom/blob/main/CHANGELOG.md#202680) [Diff/2026.8.3-2026.9.0](https://github.com/UbiqueInnovation/uetlib-bom/compare/v2026.8.3...v2026.9.0)
+- Fix `sonar.coverage.jacoco.xmlReportPaths` for single-module projects: `sonar.coverage.module` now defaults to `.`
+  (the root of the Maven build) instead of `${project.artifactId}`, which resolved to `<root>/<artifactId>/target/...`
+  and made Sonar report *"No coverage report can be found"*. Multi-module projects are unaffected: they keep overriding
+  `sonar.coverage.module` with their dedicated `{{project}}-coverage` module.
+- Updated `nullaway`, `spotless` and `hibernate-orm-plugin`
+
 ## 2026.8.3
 
 - Update `de.westemeyer:artifact-version-maven-plugin` to `3.0.0`
