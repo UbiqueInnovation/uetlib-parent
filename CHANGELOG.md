@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 2026.9.1
+
+- add `uetlib-cores` annotations `NullOrNotBlank` and `NullOrNotEmpty` as custom nullable annotations
+
 ## 2026.9.0
 
 - `uetlib-bom` updated to
