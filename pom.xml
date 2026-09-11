@@ -30,7 +30,9 @@
              - multi-module project: the module running jacoco:report-aggregate, overridden once in the
                project parent, e.g. <sonar.coverage.module>{{project}}-coverage</sonar.coverage.module> -->
         <sonar.coverage.module>.</sonar.coverage.module>
-        <sonar.coverage.jacoco.xmlReportPaths>${maven.multiModuleProjectDirectory}/${sonar.coverage.module}/target/site/jacoco-aggregate/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
+        <sonar.coverage.jacoco.xmlReportPaths>
+            ${maven.multiModuleProjectDirectory}/${sonar.coverage.module}/target/site/jacoco-aggregate/jacoco.xml
+        </sonar.coverage.jacoco.xmlReportPaths>
         <sonar.projectName>${project.artifactId}</sonar.projectName>
         <sonar.projectKey>UbiqueInnovation_${sonar.projectName}</sonar.projectKey>
         <sonar.organization>ubiqueinnovation</sonar.organization>
