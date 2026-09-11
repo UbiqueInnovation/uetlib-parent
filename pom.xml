@@ -212,7 +212,8 @@
                                 -XepOpt:NullAway:TreatGeneratedAsUnannotated=true \
                                 -XepOpt:NullAway:GeneratedCodeAnnotations=com.google.protobuf.Generated \
                                 -XepOpt:NullAway:JSpecifyMode=true \
-                                -XepOpt:NullAway:OnlyNullMarked
+                                -XepOpt:NullAway:OnlyNullMarked \
+                                -XepOpt:NullAway:CustomNullableAnnotations=ch.ubique.backend.core.validator.NullOrNotBlank,ch.ubique.backend.core.validator.NullOrNotEmpty
                             </arg>
 
                             <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
