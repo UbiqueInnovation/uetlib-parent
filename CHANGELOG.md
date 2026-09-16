@@ -1,5 +1,11 @@
 # CHANGELOG
 
+# 2026.9.2
+
+- `uetlib-bom` updated to
+  `2026.9.1`: [Changelog/2026.9.1](https://github.com/UbiqueInnovation/uetlib-bom/blob/main/CHANGELOG.md#202691) [Diff/2026.9.0-2026.9.1](https://github.com/UbiqueInnovation/uetlib-bom/compare/v2026.9.0...v2026.9.1)
+- Update `spotless`, `nullaway` and `kotlin`
+
 # 2026.9.1
 
 - add `uetlib-cores` annotations `NullOrNotBlank` and `NullOrNotEmpty` as custom nullable annotations
