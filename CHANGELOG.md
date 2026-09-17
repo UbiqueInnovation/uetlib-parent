@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 2026.9.3
+
+- Activate `spotless-maven-plugin` in `plugins`, not just declare it in `pluginManagement`
+
 # 2026.9.2
 
 - `uetlib-bom` updated to
