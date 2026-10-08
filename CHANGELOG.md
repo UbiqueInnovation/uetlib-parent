@@ -1,5 +1,12 @@
 # CHANGELOG
 
+# 2026.10.0
+
+- `uetlib-bom` updated to
+  `2026.10.0`: [Changelog/2026.10.0](https://github.com/UbiqueInnovation/uetlib-bom/blob/main/CHANGELOG.md#2026100) [Diff/2026.9.1-2026.10.0](https://github.com/UbiqueInnovation/uetlib-bom/compare/v2026.9.1...v2026.10.0)
+- Update `spotless-maven-plugin` to `3.10.3`, which supports Java 27
+- Version Updates
+
 # 2026.9.3
 
 - Activate `spotless-maven-plugin` in `plugins`, not just declare it in `pluginManagement`
