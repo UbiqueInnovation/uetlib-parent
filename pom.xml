@@ -21,6 +21,7 @@
 
         <!-- Versions -->
         <com.google.protobuf.version>4.31.1</com.google.protobuf.version>
+        <uetlib-errorprone.version>0.1.0</uetlib-errorprone.version>
 
         <!-- Sonar & Jacoco coverage reports -->
         <!-- Directory holding the aggregated JaCoCo report, relative to the root of the Maven build
@@ -202,6 +203,11 @@
                                 <artifactId>nullaway</artifactId>
                                 <version>0.14.2</version>
                             </path>
+                            <path>
+                                <groupId>ch.ubique</groupId>
+                                <artifactId>uetlib-errorprone</artifactId>
+                                <version>${uetlib-errorprone.version}</version>
+                            </path>
                         </annotationProcessorPaths>
                         <compilerArgs>
                             <arg>--should-stop=ifError=FLOW</arg>
@@ -212,6 +218,8 @@
                                 -XepDisableAllChecks \
                                 -Xep:NullAway:ERROR \
                                 -Xep:RequireExplicitNullMarking:ERROR \
+                                -Xep:OpenEnumStructure:ERROR \
+                                -Xep:OpenEnumNestedTypeImport:ERROR \
                                 -XepDisableWarningsInGeneratedCode \
                                 -XepExcludedPaths:${error-prone-excluded-paths} \
                                 -XepOpt:NullAway:TreatGeneratedAsUnannotated=true \

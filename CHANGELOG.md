@@ -1,5 +1,11 @@
 # CHANGELOG
 
+# 2026.10.1
+
+- Enable the `uetlib-errorprone` checks `OpenEnumStructure` and `OpenEnumNestedTypeImport` at
+  `ERROR`. They only apply to types extending `OpenEnumValue` from `uetlib-core`, so projects not
+  using open enums are unaffected.
+
 # 2026.10.0
 
 - `uetlib-bom` updated to
