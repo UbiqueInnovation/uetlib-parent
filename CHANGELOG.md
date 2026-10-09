@@ -1,5 +1,9 @@
 # CHANGELOG
 
+# 2026.10.1
+
+- Enable Error Prone checks for incompatible collection and equality types, ignored return values, `equals`/`hashCode`, array comparisons, primitive arrays passed to `Arrays.asList`, `compareTo`, dead exceptions, and format strings. Enable `ReferenceEquality` and `FutureReturnValueIgnored` as warnings. Exclude generated sources from these checks.
+
 # 2026.10.0
 
 - `uetlib-bom` updated to
