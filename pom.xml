@@ -17,7 +17,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
         <!-- Compile config -->
-        <error-prone-excluded-paths>.*/src/test/java/.*</error-prone-excluded-paths>
+        <error-prone-excluded-paths>.*/(src/test/java|target/generated-sources)/.*</error-prone-excluded-paths>
 
         <!-- Versions -->
         <com.google.protobuf.version>4.31.1</com.google.protobuf.version>
@@ -210,6 +210,17 @@
                             <arg>
                                 -Xplugin:ErrorProne \
                                 -XepDisableAllChecks \
+                                -Xep:CollectionIncompatibleType:ERROR \
+                                -Xep:EqualsIncompatibleType:ERROR \
+                                -Xep:ReturnValueIgnored:ERROR \
+                                -Xep:EqualsHashCode:ERROR \
+                                -Xep:ArrayEquals:ERROR \
+                                -Xep:ArraysAsListPrimitiveArray:ERROR \
+                                -Xep:CompareToZero:ERROR \
+                                -Xep:DeadException:ERROR \
+                                -Xep:FormatString:ERROR \
+                                -Xep:ReferenceEquality:WARN \
+                                -Xep:FutureReturnValueIgnored:WARN \
                                 -Xep:NullAway:ERROR \
                                 -Xep:RequireExplicitNullMarking:ERROR \
                                 -XepDisableWarningsInGeneratedCode \
