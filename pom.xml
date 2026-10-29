@@ -63,7 +63,7 @@
             <dependency>
                 <groupId>ch.ubique.uetlib</groupId>
                 <artifactId>uetlib-bom</artifactId>
-                <version>2026.10.0</version>
+                <version>2026.11.0</version>
                 <type>pom</type>
                 <scope>import</scope>
                 <exclusions>

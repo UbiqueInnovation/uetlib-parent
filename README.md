@@ -14,7 +14,7 @@ You can use it as following:
 <parent>
     <groupId>ch.ubique.uetlib</groupId>
     <artifactId>uetlib-parent</artifactId>
-    <version>...</version>
+    <version>2026.11.0</version>
 </parent>
 ```
 
