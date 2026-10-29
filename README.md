@@ -12,7 +12,7 @@ You can use it as following:
 
 ```xml
 <parent>
-    <groupId>ch.ubique</groupId>
+    <groupId>ch.ubique.uetlib</groupId>
     <artifactId>uetlib-parent</artifactId>
     <version>...</version>
 </parent>
