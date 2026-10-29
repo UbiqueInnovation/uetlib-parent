@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026.11.0 (unreleased)
+
+### Breaking changes
+
+- Move Maven coordinates from `ch.ubique:uetlib-*` to `ch.ubique.uetlib:uetlib-*`.
+- Align uetlib parent, BOM and library references with the migration releases.
+
 # 2026.10.1
 
 - Enable Error Prone checks for incompatible collection and equality types, ignored return values, `equals`/`hashCode`, array comparisons, primitive arrays passed to `Arrays.asList`, `compareTo`, dead exceptions, and format strings. Enable `ReferenceEquality` and `FutureReturnValueIgnored` as warnings. Exclude generated sources from these checks.
