@@ -4,32 +4,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>ch.ubique.uetlib</groupId>
+    <groupId>ch.ubique</groupId>
     <artifactId>uetlib-parent</artifactId>
     <version>2027.0.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-
-    <name>uetlib-parent</name>
-    <description>Shared Maven build conventions for Java backend libraries.</description>
-    <url>https://github.com/UbiqueInnovation/uetlib-parent</url>
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>https://www.apache.org/licenses/LICENSE-2.0.txt</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-    <organization>
-        <name>Ubique Innovation AG</name>
-        <url>https://www.ubique.ch</url>
-    </organization>
-    <developers>
-        <developer>
-            <name>Ubique Innovation AG</name>
-            <organization>Ubique Innovation AG</organization>
-            <organizationUrl>https://www.ubique.ch</organizationUrl>
-        </developer>
-    </developers>
 
     <properties>
         <java.version>25</java.version>
@@ -83,9 +61,9 @@
     <dependencyManagement>
         <dependencies>
             <dependency>
-                <groupId>ch.ubique.uetlib</groupId>
+                <groupId>ch.ubique</groupId>
                 <artifactId>uetlib-bom</artifactId>
-                <version>2026.11.0</version>
+                <version>2026.10.0</version>
                 <type>pom</type>
                 <scope>import</scope>
                 <exclusions>
@@ -251,7 +229,7 @@
                                 -XepOpt:NullAway:GeneratedCodeAnnotations=com.google.protobuf.Generated \
                                 -XepOpt:NullAway:JSpecifyMode=true \
                                 -XepOpt:NullAway:OnlyNullMarked \
-                                -XepOpt:NullAway:CustomNullableAnnotations=ch.ubique.uetlib.core.validator.NullOrNotBlank,ch.ubique.uetlib.core.validator.NullOrNotEmpty
+                                -XepOpt:NullAway:CustomNullableAnnotations=ch.ubique.backend.core.validator.NullOrNotBlank,ch.ubique.backend.core.validator.NullOrNotEmpty
                             </arg>
 
                             <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
@@ -326,7 +304,7 @@
                         <execution>
                             <id>attach-sources</id>
                             <goals>
-                                <goal>jar-no-fork</goal>
+                                <goal>jar</goal>
                             </goals>
                         </execution>
                     </executions>
@@ -470,122 +448,23 @@
         </extensions>
     </build>
 
-
-    <!-- Public upstreams for GeoTools and netCDF, which are not hosted on Central. -->
     <repositories>
         <repository>
-            <id>central</id>
-            <url>https://repo.maven.apache.org/maven2</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>osgeo</id>
-            <url>https://repo.osgeo.org/repository/release/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
-        <repository>
-            <id>unidata-all</id>
-            <url>https://artifacts.unidata.ucar.edu/repository/unidata-all/</url>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
+            <id>ubique-artifactory-virtual</id>
+            <name>ubique</name>
+            <url>https://artifactory.ubique.ch/artifactory/ubique</url>
         </repository>
     </repositories>
 
-    <scm child.scm.url.inherit.append.path="false" child.scm.connection.inherit.append.path="false"
-         child.scm.developerConnection.inherit.append.path="false">
-        <connection>scm:git:https://github.com/UbiqueInnovation/uetlib-parent.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com/UbiqueInnovation/uetlib-parent.git</developerConnection>
+    <distributionManagement>
+        <repository>
+            <id>ubique-artifactory-virtual</id>
+            <name>ubique</name>
+            <url>https://artifactory.ubique.ch/artifactory/ubique</url>
+        </repository>
+    </distributionManagement>
+
+    <scm child.scm.url.inherit.append.path="false">
         <url>https://github.com/UbiqueInnovation/uetlib-parent</url>
     </scm>
-    <!-- Explicit opt-in: ordinary builds and private consumers do not publish to Central. -->
-    <profiles>
-        <profile>
-            <id>central-release</id>
-            <properties>
-                <central.publishing.skip>false</central.publishing.skip>
-                <central.publishing.skipUpload>false</central.publishing.skipUpload>
-            </properties>
-            <build>
-                <resources>
-                    <resource><directory>src/main/resources</directory></resource>
-                    <resource>
-                        <directory>${maven.multiModuleProjectDirectory}</directory>
-                        <targetPath>META-INF/uetlib</targetPath>
-                        <filtering>false</filtering>
-                        <includes>
-                            <include>LICENSE*</include><include>NOTICE*</include>
-                            <include>COPYING*</include><include>AUTHORS</include><include>CREDITS</include>
-                            <include>LICENSES/**</include><include>PROVENANCE.md</include>
-                        </includes>
-                    </resource>
-                </resources>
-                <plugins>
-                    <plugin>
-                        <groupId>org.sonatype.central</groupId>
-                        <artifactId>central-publishing-maven-plugin</artifactId>
-                        <version>0.12.0</version>
-                        <extensions>true</extensions>
-                        <configuration>
-                            <publishingServerId>central</publishingServerId>
-                            <deploymentName>${project.groupId}:${project.artifactId}:${project.version}</deploymentName>
-                            <autoPublish>true</autoPublish>
-                            <waitUntil>validated</waitUntil>
-                            <skipPublishing>${central.publishing.skip}</skipPublishing>
-                            <skipUpload>${central.publishing.skipUpload}</skipUpload>
-                        </configuration>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-gpg-plugin</artifactId>
-                        <version>3.2.8</version>
-                        <configuration>
-                            <bestPractices>true</bestPractices>
-                            <skip>${central.publishing.skip}</skip>
-                            <gpgArguments>
-                                <arg>--pinentry-mode</arg>
-                                <arg>loopback</arg>
-                            </gpgArguments>
-                        </configuration>
-                        <executions>
-                            <execution>
-                                <id>sign-artifacts</id>
-                                <phase>verify</phase>
-                                <goals><goal>sign</goal></goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-source-plugin</artifactId>
-                        <version>3.4.0</version>
-                        <executions>
-                            <execution>
-                                <id>attach-sources</id>
-                                <phase>package</phase>
-                                <goals><goal>jar-no-fork</goal></goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                    <plugin>
-                        <groupId>org.apache.maven.plugins</groupId>
-                        <artifactId>maven-javadoc-plugin</artifactId>
-                        <version>3.12.0</version>
-                        <configuration><doclint>none</doclint><quiet>true</quiet></configuration>
-                        <executions>
-                            <execution>
-                                <id>attach-javadocs</id>
-                                <phase>package</phase>
-                                <goals><goal>jar</goal></goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>
