@@ -1,16 +1,5 @@
 # CHANGELOG
 
-## 2026.11.0 (unreleased)
-
-### Breaking changes
-
-- Move Java packages from `ch.ubique.backend` to `ch.ubique.uetlib`, including class-name resources. Existing Spring configuration property keys are unchanged.
-- Remove the inherited Ubique Artifactory repository and deployment destination; private consumers must configure their own registry.
-- Add Apache-2.0 licensing for original code, preserve third-party licenses, and add public project metadata and contribution/security guidance.
-
-- Move Maven coordinates from `ch.ubique:uetlib-*` to `ch.ubique.uetlib:uetlib-*`.
-- Align uetlib parent, BOM and library references with the migration releases.
-
 # 2026.10.1
 
 - Enable Error Prone checks for incompatible collection and equality types, ignored return values, `equals`/`hashCode`, array comparisons, primitive arrays passed to `Arrays.asList`, `compareTo`, dead exceptions, and format strings. Enable `ReferenceEquality` and `FutureReturnValueIgnored` as warnings. Exclude generated sources from these checks.
@@ -35,19 +24,6 @@
 # 2026.9.1
 
 - add `uetlib-cores` annotations `NullOrNotBlank` and `NullOrNotEmpty` as custom nullable annotations
-
-### Migration
-
-After the migration releases and `uetlib-rewrite:0.1.0` are published, run this from the consuming project, then review the diff and run its tests:
-
-```sh
-mvn org.openrewrite.maven:rewrite-maven-plugin:6.46.1:run \
-  -Drewrite.recipeArtifactCoordinates=ch.ubique.uetlib:uetlib-rewrite:0.1.0 \
-  -Drewrite.activeRecipes=ch.ubique.uetlib.MigrateToPublicUetlib
-```
-
-The recipe updates Maven coordinates/versions, Java references and known class-name resources. Review application-owned packages under the old namespace, Kotlin, reflection patterns, native-access module flags and persisted class names separately. Use `:dryRun` instead of `:run` to preview a patch.
-
 
 ## 2026.9.0
 
