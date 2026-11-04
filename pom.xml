@@ -85,7 +85,7 @@
             <dependency>
                 <groupId>ch.uetlib</groupId>
                 <artifactId>uetlib-bom</artifactId>
-                <version>2026.11.0</version>
+                <version>2026.11.1</version>
                 <type>pom</type>
                 <scope>import</scope>
                 <exclusions>
@@ -251,7 +251,7 @@
                                 -XepOpt:NullAway:GeneratedCodeAnnotations=com.google.protobuf.Generated \
                                 -XepOpt:NullAway:JSpecifyMode=true \
                                 -XepOpt:NullAway:OnlyNullMarked \
-                                -XepOpt:NullAway:CustomNullableAnnotations=ch.ubique.uetlib.core.validator.NullOrNotBlank,ch.ubique.uetlib.core.validator.NullOrNotEmpty
+                                -XepOpt:NullAway:CustomNullableAnnotations=ch.uetlib.core.validator.NullOrNotBlank,ch.uetlib.core.validator.NullOrNotEmpty
                             </arg>
 
                             <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
