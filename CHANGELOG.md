@@ -1,12 +1,20 @@
 # CHANGELOG
 
+## 2026.11.1
+
+- Load `ch.uetlib:uetlib-errorprone:0.1.1` on the annotation processor path and enable the
+  `OpenEnumStructure` and `OpenEnumNestedTypeImport` checks as errors.
+- Update shared Maven build and publish workflows to v0.2.4.
+- Clarify configuration-property migration guidance for consumers.
+
 ## 2026.11.0
 
 - Move Java packages and class references from `ch.ubique.uetlib` to `ch.uetlib`.
 
 ### Breaking changes
 
-- Move Java packages from `ch.ubique.backend` to `ch.uetlib`, including class-name resources. The combined OpenRewrite migration also renames known Spring configuration keys to `ch.uetlib.*`.
+- Move Java packages from `ch.ubique.backend` to `ch.uetlib`, including class-name resources. The combined OpenRewrite
+  migration also renames known Spring configuration keys to `ch.uetlib.*`.
 - Remove the inherited Ubique Artifactory repository and deployment destination; private consumers must configure their
   own registry.
 - Add Apache-2.0 licensing for original code, preserve third-party licenses, and add public project metadata and

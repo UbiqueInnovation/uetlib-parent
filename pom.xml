@@ -85,7 +85,7 @@
             <dependency>
                 <groupId>ch.uetlib</groupId>
                 <artifactId>uetlib-bom</artifactId>
-                <version>2026.11.3</version>
+                <version>2026.11.4</version>
                 <type>pom</type>
                 <scope>import</scope>
                 <exclusions>
@@ -220,6 +220,11 @@
                                 <version>2.50.0</version>
                             </path>
                             <path>
+                                <groupId>ch.uetlib</groupId>
+                                <artifactId>uetlib-errorprone</artifactId>
+                                <version>0.1.1</version>
+                            </path>
+                            <path>
                                 <groupId>com.uber.nullaway</groupId>
                                 <artifactId>nullaway</artifactId>
                                 <version>0.14.2</version>
@@ -229,30 +234,7 @@
                             <arg>--should-stop=ifError=FLOW</arg>
                             <arg>-XDcompilePolicy=simple</arg>
 
-                            <arg>
-                                -Xplugin:ErrorProne \
-                                -XepDisableAllChecks \
-                                -Xep:CollectionIncompatibleType:ERROR \
-                                -Xep:EqualsIncompatibleType:ERROR \
-                                -Xep:ReturnValueIgnored:ERROR \
-                                -Xep:EqualsHashCode:ERROR \
-                                -Xep:ArrayEquals:ERROR \
-                                -Xep:ArraysAsListPrimitiveArray:ERROR \
-                                -Xep:CompareToZero:ERROR \
-                                -Xep:DeadException:ERROR \
-                                -Xep:FormatString:ERROR \
-                                -Xep:ReferenceEquality:WARN \
-                                -Xep:FutureReturnValueIgnored:WARN \
-                                -Xep:NullAway:ERROR \
-                                -Xep:RequireExplicitNullMarking:ERROR \
-                                -XepDisableWarningsInGeneratedCode \
-                                -XepExcludedPaths:${error-prone-excluded-paths} \
-                                -XepOpt:NullAway:TreatGeneratedAsUnannotated=true \
-                                -XepOpt:NullAway:GeneratedCodeAnnotations=com.google.protobuf.Generated \
-                                -XepOpt:NullAway:JSpecifyMode=true \
-                                -XepOpt:NullAway:OnlyNullMarked \
-                                -XepOpt:NullAway:CustomNullableAnnotations=ch.uetlib.core.validator.NullOrNotBlank,ch.uetlib.core.validator.NullOrNotEmpty
-                            </arg>
+                            <arg>-Xplugin:ErrorProne -XepDisableAllChecks -Xep:OpenEnumStructure:ERROR -Xep:OpenEnumNestedTypeImport:ERROR -Xep:CollectionIncompatibleType:ERROR -Xep:EqualsIncompatibleType:ERROR -Xep:ReturnValueIgnored:ERROR -Xep:EqualsHashCode:ERROR -Xep:ArrayEquals:ERROR -Xep:ArraysAsListPrimitiveArray:ERROR -Xep:CompareToZero:ERROR -Xep:DeadException:ERROR -Xep:FormatString:ERROR -Xep:ReferenceEquality:WARN -Xep:FutureReturnValueIgnored:WARN -Xep:NullAway:ERROR -Xep:RequireExplicitNullMarking:ERROR -XepDisableWarningsInGeneratedCode -XepExcludedPaths:${error-prone-excluded-paths} -XepOpt:NullAway:TreatGeneratedAsUnannotated=true -XepOpt:NullAway:GeneratedCodeAnnotations=com.google.protobuf.Generated -XepOpt:NullAway:JSpecifyMode=true -XepOpt:NullAway:OnlyNullMarked -XepOpt:NullAway:CustomNullableAnnotations=ch.uetlib.core.validator.NullOrNotBlank,ch.uetlib.core.validator.NullOrNotEmpty</arg>
 
                             <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.api=ALL-UNNAMED</arg>
                             <arg>-J--add-exports=jdk.compiler/com.sun.tools.javac.file=ALL-UNNAMED</arg>
