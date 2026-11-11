@@ -4,7 +4,6 @@
 
 - Load `ch.uetlib:uetlib-errorprone:0.1.1` on the annotation processor path and enable the
   `OpenEnumStructure` and `OpenEnumNestedTypeImport` checks as errors.
-- Update shared Maven build and publish workflows to v0.2.4.
 - Clarify configuration-property migration guidance for consumers.
 
 ## 2026.11.0
