@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.11.2
+
+- Use shared Maven build and publish workflows at `v1.0.0` to enforce formatting checks in CI.
+
 ## 2026.11.1
 
 - Load `ch.uetlib:uetlib-errorprone:0.1.1` on the annotation processor path and enable the
