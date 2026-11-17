@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 2026.11.3
+
+- Use shared Maven workflows at `v1.1.0`: wait for the SonarCloud quality gate and analyse with the
+  uetlib-only Sonar token.
+
 ## 2026.11.2
 
 - Use shared Maven build and publish workflows at `v1.0.0` to enforce formatting checks in CI.
