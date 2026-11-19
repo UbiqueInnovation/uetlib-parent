@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 2026.11.4
+
+- Enable Error Prone `JavaUtilDate` as an error: use `java.time` instead of `java.util.Date`.
+
 ## 2026.11.3
 
 - Build pull requests, including forks, and pushes to `main` instead of every branch push; use shared Maven
