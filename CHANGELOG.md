@@ -3,6 +3,8 @@
 ## 2026.11.4
 
 - Enable Error Prone `JavaUtilDate` as an error: use `java.time` instead of `java.util.Date`.
+- Run Error Prone's default checks: errors fail the build, warnings are reported. `MissingSummary` stays off.
+  Previously `-XepDisableAllChecks` disabled all checks except the listed ones.
 
 ## 2026.11.3
 
