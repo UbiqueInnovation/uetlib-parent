@@ -2,10 +2,16 @@
 
 ## 2026.11.4
 
+- Promote `PreferJavaTimeOverload` and `UnusedException` to errors.
+
 - Enable Error Prone `JavaUtilDate` as an error: use `java.time` instead of `java.util.Date`.
 - Run Error Prone's default checks: errors fail the build, warnings are reported. `MissingSummary` stays off.
   Previously `-XepDisableAllChecks` disabled all checks except the listed ones. Explicit flags remain only where they
   differ from Error Prone's defaults (`EqualsIncompatibleType` and `JavaUtilDate` as errors).
+- Promote Error Prone warnings that catch real bugs to errors: `DefaultCharset`, `StringCaseLocaleUsage`,
+  `JavaTimeDefaultTimeZone`, `ClassInitializationDeadlock`, `EqualsGetClass`, `BadInstanceof`, `EnumOrdinal`,
+  `OperatorPrecedence`, `UnusedVariable`, `UnusedMethod`, `EmptyCatch`, `FutureReturnValueIgnored`,
+  `ReferenceEquality`, `JdkObsolete`, `NullablePrimitive`, `MultipleNullnessAnnotations` and `MissingOverride`.
 
 ## 2026.11.3
 
