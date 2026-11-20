@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 2026.11.5
+
+- Update to Spring Boot 4.2 / Spring Cloud 2026
+- `uetlib-bom` updated to
+  `2026.11.6`: [Changelog/2026.11.6](https://github.com/UbiqueInnovation/uetlib-bom/blob/main/CHANGELOG.md#2026116) [Diff/2026.11.4-2026.11.6](https://github.com/UbiqueInnovation/uetlib-bom/compare/v2026.11.4...v2026.11.6)
+- Updated dependencies and actions.
+
 ## 2026.11.4
 
 - Promote `PreferJavaTimeOverload` and `UnusedException` to errors.
