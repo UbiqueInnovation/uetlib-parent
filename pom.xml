@@ -100,7 +100,7 @@
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>4.1.2</version>
+                <version>4.1.3</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -217,7 +217,7 @@
                             <path>
                                 <groupId>com.google.errorprone</groupId>
                                 <artifactId>error_prone_core</artifactId>
-                                <version>2.52.0</version>
+                                <version>2.53.0</version>
                             </path>
                             <path>
                                 <groupId>ch.uetlib</groupId>
@@ -227,7 +227,7 @@
                             <path>
                                 <groupId>com.uber.nullaway</groupId>
                                 <artifactId>nullaway</artifactId>
-                                <version>0.14.3</version>
+                                <version>0.14.4</version>
                             </path>
                         </annotationProcessorPaths>
                         <compilerArgs>
@@ -430,7 +430,7 @@
                 <plugin>
                     <groupId>org.hibernate.orm</groupId>
                     <artifactId>hibernate-maven-plugin</artifactId>
-                    <version>7.4.15.Final</version>
+                    <version>7.4.17.Final</version>
                     <executions>
                         <execution>
                             <configuration>
